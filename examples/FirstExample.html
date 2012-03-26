@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CodMerge: Active Line Demo</title>
+    <script src="../lib/codmerge.js"></script>
+  </head>
+  <body>
+    <h1>CodMerge: Demo</h1>
+
+    <form>
+		<textarea id="code" name="code1"></textarea>
+		<textarea id="code" name="code2"></textarea>
+	</form>
+    
+	<script>
+		var editor = CodMerge.initWithTextAreas(document.getElementById("code1"), document.getElementById("code2"), {
+		  //mode: "application/xml",
+		  lineNumbers: true,
+		  lineWrapping: true,
+		});
+		var hlLine = editor.setLineClass(0, "activeline");
+	</script>
+
+    <p>Styling the current cursor line.</p>
+
+  </body>
+</html>
